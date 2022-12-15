@@ -1,0 +1,48 @@
+.header{
+ 
+    float: right;
+}
+
+.forget{
+    text-decoration: none;
+    color: black;
+    
+    font-size: 16px;
+    font-weight: bold;
+}
+.rs-dropdown .rs-btn > .rs-dropdown-toggle-caret {
+    margin-left: 4px;
+    margin-top: .8rem;
+    
+  }
+.dropItem{
+    border: none;
+    border-radius: 1rem;
+    background-color: white;
+    font-size: 16px;
+    align-items: center;
+    align-content: center;
+    width: 180px;
+padding: 1rem;
+}
+ 
+.logout{
+    border-radius: 1rem;
+    margin-top: 1rem;
+    width: 8rem;
+    margin-left: .5rem;
+}
+.forget:hover{ 
+    
+    color: #000;
+    background-color: #f2f6f8;
+    text-decoration: none;
+    
+}
+.forget:active{
+  
+    color: #000;     
+    text-decoration: none;
+  
+}
+ 

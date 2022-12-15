@@ -1,0 +1,194 @@
+ 
+.user_btn{
+
+     
+    text-align: center; 
+    float: right;
+    justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+    width: 150px;
+    height:  fit-content; 
+
+}
+.user_btn:active{
+    background-color: #1f55af!important;
+    border-color: #1d4fa4!important;
+    color: #fff;
+}
+.dropdown{
+    background-color: aliceblue;
+    margin-left: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+
+
+
+
+ 
+
+
+.ft_button{
+    background-color: #286ad9;
+    border: none;
+    color: white; 
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    height: 40px;
+    width: 180px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: right;   
+    cursor: pointer;
+
+}
+
+.transp_button{
+    background-color: white;
+    color: #286ad9;
+    border: 1px solid #286ad9;
+    margin-right: 1.5rem;
+    float: right;
+}
+
+
+ 
+.table_font{
+    font-size: 20px;
+    width: 100%;
+}
+.th{
+    margin: 1rem;
+    background-color:"#f2f6f8" ; 
+}
+
+.ftright_button{
+    background-color: #286ad9;
+    border: none;
+    color: white; 
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold; 
+    height: 40px;
+    width: 180px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; 
+ 
+ 
+    cursor: pointer;
+
+}
+
+
+ 
+.label{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+ 
+   
+}
+
+ 
+
+.theading{
+    background-color: #7f838a;
+    color: #f2f6f8;
+}
+.foter_card{
+    background-color: #f2f6f8;
+    margin: 2rem;
+    width: 994px;
+}
+
+
+
+
+
+
+
+
+.required {
+    color: red;
+  }
+
+
+.card_styling{
+  
+    
+    margin-top: 1rem;  
+    overflow-x: hidden;
+}
+
+.select_style{
+    width: 50%;
+    background-color: white;
+    border-color: lightgray;
+  padding: 5px;
+    border-radius: 3px;
+    margin-left: 18px;
+    height: 38px;
+
+}
+.back_ground{
+    background: #f7f9fb 0 0 no-repeat
+ }
+
+  .user_label{
+    margin-top: 13px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: .8571em;
+    color: #9a9a9a;
+  }
+
+.dropdown{
+    background-color: white;
+    border: 1px #41d5e2;
+}
+
+
+
+.input_style{
+    margin-left: 18px;
+    width:  100%;
+    background-color:  #f2f6f8;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 100%; 
+  }
+
+.form_style{
+
+
+    background-color:  #f2f6f8;
+    border: none;
+    width: 100%;
+    height: auto;
+    background-color: white;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,.2);
+  margin:10px;
+  border-radius: 15px;
+ 
+
+}
+
+ 
+
+.list_users{
+    height: 56px;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 34px;font-family: Poppins;
+    color: #222730;    font-size: 1.5rem;
+    font-weight: 600;
+}
+ 

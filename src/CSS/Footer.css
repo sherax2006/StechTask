@@ -1,0 +1,14 @@
+
+ 
+.footer {
+    align-items: right;
+    margin-top: 3rem;
+ 
+    margin-bottom: 1rem;
+    color: white;
+ 
+    font-size: .875rem;
+   font-weight: bold;
+   position: fixed;
+    right: 30px;
+}

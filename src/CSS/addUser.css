@@ -1,0 +1,54 @@
+.add_userLabel{
+    font-weight: bold; 
+    font-size:35px;
+    margin-left: -11px;
+    color: black;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  
+}
+.EyeIcon{  
+    position: absolute;
+    right: 3%;
+    margin-bottom: 3px; 
+    bottom: 12%;
+}
+.users{
+    font-size: 16px;
+    line-height: 1.5rem;
+} 
+ 
+.bottom_button{
+    margin: 1rem;
+    margin-top: 40px;
+}
+.add_user{
+    width: 250px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cancel_btn{
+    background-color: white;
+    color: #286ad9;
+    border: 1px solid #286ad9;
+    margin-right: 0;
+    width: 250px;
+font-weight: bold;
+   
+}
+ .user_input{
+    
+      padding: 1rem;     
+}
+.required{
+    user-select: none;
+}
+.user_form{
+    padding: 3rem;
+    background-color: white;
+    border: none;
+    border-radius: 7px;
+    width: 100%;
+    height: max-content;
+}

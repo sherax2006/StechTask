@@ -1,0 +1,48 @@
+ 
+ .sure_del{
+    text-align: center;
+    margin-top: 1rem;
+    color: black;
+    font-weight: bold;
+    font-size: 20px 
+ }
+
+ .btn_cnl{
+    border: 1px solid transparent;
+    border-color: #7f838a;
+    color: #7f838a;
+    border-radius: 8px;
+  background: transparent;    font-size: .875rem;
+  font-weight: 600;
+  width: 100%;
+ }
+ .btn_del{
+    border: 1px solid transparent;
+    width: 100%;    font-size: .875rem;
+    font-weight: 600;    background-color: #ce3939;
+    border-color: #ce3939;
+    color: #fff; 
+    border-radius: 8px;
+ }
+
+ 
+ .btn_del:hover{    background-color: #b42d2d;
+    border-color: #aa2a2a;
+    color: #fff
+ }
+ .btn_del:active{  
+
+ background-color: #aa2a2a!important;
+ border-color: #a02828!important;
+ color: #fff!important;
+ }
+ 
+ 
+ .btn_del:focus{
+    background-color: #b42d2d;
+    border-color: #aa2a2a;
+    color: #fff;
+ } 
+
+
+ 

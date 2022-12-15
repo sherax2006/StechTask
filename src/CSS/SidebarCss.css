@@ -1,0 +1,63 @@
+
+
+.sidebar{
+    background-color: #101c30;
+    color: black;
+ min-height: 100vh;
+    padding: 0;
+    width: 300px;
+    margin: 0; 
+}
+.stech_img{
+    width: 100%;
+    height: 91px; 
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+}
+.logo{
+    font-size: 30px;
+}
+.bars{
+    display: flex;
+    font-size: 25px; 
+    color: white;
+}
+.link{
+    display: flex;
+    color: #f2f6f8;
+    padding: 7px 15px;
+   border: none;
+   border-radius: 16px;
+    gap: 10px; 
+    height: 40px;
+    padding: 8px;
+    outline: none;
+    margin: 12px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.link:hover{ 
+    background-color: #000;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.active{
+    background-color: #5c93f1;
+    color: #fff;    
+    font-size: 1rem;
+    padding-right: 1.5rem;
+    text-decoration: none;
+    outline: none;
+}
+.icon, .link_text{
+    font-size: 1rem;
+    outline: none;
+ 
+    text-decoration: none;
+    color: #fff;
+    
+}

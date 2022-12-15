@@ -1,0 +1,35 @@
+.edit_User{    font-weight: bold; 
+    font-size:35px;
+    
+    color: black;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+
+}
+.edit{
+    font-size: 16px;
+    line-height: 1.5rem;
+} 
+.card_styling{
+    
+    margin-top: 2rem;
+}
+.user_info{
+    font-size: 20px;
+    color: black;
+    
+    font-weight: bold;
+}
+
+
+.edit_row{
+    margin-top: 2rem;
+}
+
+
+
+
+
+.edit_footer{
+    margin-top: 3rem;
+}
