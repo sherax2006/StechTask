@@ -44,5 +44,7 @@
     color: #fff;
  } 
 
-
+ .modal-content {
+   width: 90%;
+ }
  

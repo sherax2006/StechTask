@@ -6,7 +6,6 @@ import "../../App.css";
 import "../../CSS/common.css";
 import Header from "../Header";
 const logo = require("../../IMAGES/stech_logo.png");
-
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
   const toggle = () => setIsOpen(!isOpen);
@@ -39,44 +38,49 @@ const Sidebar = ({ children }) => {
     },
   ];
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ width: isOpen ? "300px" : "50px" }} className="sidebar">
-        <div className="top_section">
-          <img
-            src={logo}
-            style={{ display: isOpen ? "block" : "none" }}
-            alt="Login Form"
-            className="stech_img"
-          />
-          <div style={{ marginLeft: isOpen ? "17px" : "0px" }} className="bars">
-            <FaBars onClick={toggle} />
-          </div>
-        </div>
-        {menuItem.map((item, index) => (
-          <NavLink
-            to={item.path}
-            key={index}
-            style={{ textDecoration: "none" }}
-            className="link"
-            activeClassName="active"
-          >
-            <div className="icon">{item.icon}</div>
-            <div
+    <>
+      <div style={{ display: "flex" }}>
+        <div style={{ width: isOpen ? "300px" : "50px" }} className="sidebar">
+          <div className="top_section">
+            <img
+              src={logo}
               style={{ display: isOpen ? "block" : "none" }}
-              className="link_text"
+              alt="Login Form"
+              className="stech_img"
+            />
+            <div
+              style={{ marginLeft: isOpen ? "17px" : "0px" }}
+              className="bars"
             >
-              {item.name}
+              <FaBars onClick={toggle} />
             </div>
-          </NavLink>
-        ))}
-      </div>
-      <main>
-        <div style={{ float: "right" }}>
-          <Header />
+          </div>
+          {menuItem.map((item, index) => (
+            <NavLink
+              to={item.path}
+              key={index}
+              style={{ textDecoration: "none" }}
+              className="link"
+              activeClassName="active"
+            >
+              <div className="icon">{item.icon}</div>
+              <div
+                style={{ display: isOpen ? "block" : "none" }}
+                className="link_text"
+              >
+                {item.name}
+              </div>
+            </NavLink>
+          ))}
         </div>
-        <div>{children}</div>
-      </main>
-    </div>
+        <main>
+          <div style={{ float: "right" }}>
+            <Header />
+          </div>
+          <div>{children}</div>
+        </main>
+      </div>
+    </>
   );
 };
 

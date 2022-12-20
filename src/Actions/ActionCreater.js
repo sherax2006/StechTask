@@ -17,11 +17,6 @@ class ACLOGIN extends Component {
           window.location.href = "/dashboard";
         } else {
           toast.error("Invalid Credentials");
-
-          
-
-
-          console.log("invalid Login");
         }
       })
       .catch((err) => {

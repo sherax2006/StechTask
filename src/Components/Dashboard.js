@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-import "../CSS/common.css"; 
+import "../CSS/common.css";
+// import Paginate from "./Pagination";
 class Dashboard extends Component {
-  // componentDidMount() {
-  //   VMService.VMS_login("admin", "here2enter").catch((err) => {
-  //     console.log(err);
-  //   });
-  // }
   render() {
     return (
       <div>

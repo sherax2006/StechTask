@@ -1,7 +1,12 @@
 import { Badge } from "reactstrap";
 import { Table, Card, CardBody, Row, Col } from "reactstrap";
 import "../CSS/Visitors.css";
+import { useSelector, useDispatch } from "react-redux";
+import VMService from "../Services/VMService";
+import { useEffect } from "react";
+// import { vms_instance } from "../Interceptors/VMS_INTERCEPT";
 const base_URL = "https://vms.simplitech.ai";
+// const visit_URL = "/visitors_data/list/";
 
 const getBadgeStatus = (status) => {
   if (status === true) {
@@ -11,9 +16,28 @@ const getBadgeStatus = (status) => {
   }
 };
 
-// APPLY FILTER 
+// APPLY FILTER
 // VISITOR TABLE
+// console.log("object");
 const VisitorTable = (props) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    VMService.VMS_login("admin", "here2enter").catch((err) => {
+      console.log(err);
+    });
+  });
+
+  const sortBy = (val) => {
+    console.log(val);
+    dispatch({ type: "CHANGE_OREDR", value: val });
+  };
+  // const val = useSelector((state) => state.UserRed.order_by);
+  // console.log(val);
+
+  // dispatch({ type: "CHANGE_OREDR", value: "time_stamp" });
+
   return (
     <>
       {props.Result && props.Result.length > 0 ? (
@@ -27,52 +51,58 @@ const VisitorTable = (props) => {
                       <th>Visitor</th>
                       <th>CNIC Picture</th>
                       <th
-
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("d_date");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("d_date");
+                        }}
                       >
                         Date
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("d_time");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("d_time");
+                        }}
                       >
                         Time
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("name");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("name");
+                        }}
                       >
                         Name
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("cnic");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("cnic");
+                        }}
                       >
                         CNIC#
                       </th>
-                      <th>Badge ID</th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("reference_person");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("batch_id");
+                        }}
+                      >
+                        Badge ID
+                      </th>
+                      <th
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("reference_person");
+                        }}
                       >
                         Host
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("department");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("department");
+                        }}
                       >
                         Department
                       </th>
@@ -130,4 +160,4 @@ const VisitorTable = (props) => {
   );
 };
 
-export default VisitorTable; 
+export default VisitorTable;

@@ -1,12 +1,12 @@
  
 .user_btn{
-
-     
+ 
     text-align: center; 
     float: right;
     justify-content: center;
   font-size: 20px;
   font-weight: bold;
+  background-color: #286ad9;
     width: 150px;
     height:  fit-content; 
 
@@ -23,13 +23,7 @@
     height: fit-content;
 }
 
-
-
-
-
-
  
-
 
 .ft_button{
     background-color: #286ad9;
@@ -79,14 +73,11 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px; 
- 
- 
+  
     cursor: pointer;
+ }
 
-}
-
-
- 
+  
 .label{
     font-size: 22px;
     font-weight: bold;
@@ -94,9 +85,7 @@
  
    
 }
-
  
-
 .theading{
     background-color: #7f838a;
     color: #f2f6f8;
@@ -106,21 +95,12 @@
     margin: 2rem;
     width: 994px;
 }
-
-
-
-
-
-
-
-
+ 
 .required {
     color: red;
   }
-
-
+ 
 .card_styling{
-  
     
     margin-top: 1rem;  
     overflow-x: hidden;
@@ -167,8 +147,7 @@
   }
 
 .form_style{
-
-
+ 
     background-color:  #f2f6f8;
     border: none;
     width: 100%;
@@ -180,9 +159,7 @@
  
 
 }
-
  
-
 .list_users{
     height: 56px;
     width: 100%;
@@ -190,5 +167,4 @@
     margin-bottom: 34px;font-family: Poppins;
     color: #222730;    font-size: 1.5rem;
     font-weight: 600;
-}
- 
+} 

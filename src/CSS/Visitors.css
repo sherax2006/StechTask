@@ -84,7 +84,7 @@ color: black;
     text-emphasis-color: black;
   
     width: 426px;
- }
+ } 
  .clear_filter{
     float: right; 
     margin-right: 2rem;
@@ -99,18 +99,7 @@ color: black;
    max-width: 100%; 
    width: 100%;
 }
-
-/* .user_btn{
-
-     
-    text-align: center; 
-    float: right;
-    justify-content: center;
-    float: right;
-    width: 100px;
-    height:  fit-content; 
-
-} */
+ 
 
 .header{
     width: 100%;
@@ -140,5 +129,11 @@ color: black;
     color: #16365f; 
     margin-bottom: 2rem;
     font-size: 16px;
+
+}
+
+.rs-btn-close {
+
+display: none;
 
 }

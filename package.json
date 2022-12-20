@@ -19,6 +19,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-icons": "^4.7.1",
     "react-icons-kit": "^2.0.0",
+    "react-js-pagination": "^3.0.3",
     "react-notifications": "^1.7.4",
     "react-redux": "^7.2.2",
     "react-router": "^5.2.0 ",

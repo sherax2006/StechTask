@@ -7,7 +7,6 @@ import {
   Input,
   Label,
   Col,
-  Table,
   Row,
   Button,
 } from "reactstrap";
@@ -276,7 +275,7 @@ class Visitors extends Component {
                   <br />
                   <DateRangePicker
                     className="date_Picker dateRPicker"
-                    format="dd-MM-yy"
+                    format="dd/MM/yy"
                     editable={false}
                     defaultValue={this.state.inputDate}
                     onChange={(date) => {

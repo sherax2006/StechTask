@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Button, DropdownItem } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../CSS/Header.css";
-
 import Dropdown from "rsuite/Dropdown";
 import "rsuite/dist/rsuite.min.css";
 import { FaLock } from "react-icons/fa";
@@ -12,7 +11,6 @@ class Header extends Component {
     super(props);
     this.toggle = this.toggle.bind(this);
     this.LOGOUT = this.LOGOUT.bind(this);
-
     this.state = {
       dropdownOpen: false,
     };
@@ -55,7 +53,6 @@ class Header extends Component {
             </Link>
             <br />
             <Button color="primary" className="logout" onClick={this.LOGOUT}>
-              {" "}
               Logout
             </Button>
           </DropdownItem>
@@ -64,5 +61,4 @@ class Header extends Component {
     );
   }
 }
-
 export default Header;

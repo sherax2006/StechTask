@@ -8,9 +8,7 @@ import Col from "react-bootstrap/Col";
 import "../CSS/LoginCss.css";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
-
 import { connect } from "react-redux";
-
 import { action_login } from "../Actions/ActionTypes";
 const logo = require("../IMAGES/login_img.png"); // with require
 class LOGIN extends Component {
@@ -33,7 +31,7 @@ class LOGIN extends Component {
       passwordShown: !status,
     });
   }
-
+ 
   handleChange(e) {
     const val = e.target.value;
     const valu = val.trim();
@@ -45,7 +43,14 @@ class LOGIN extends Component {
   handleLogin(e) {
     e.preventDefault();
 
-    this.props.LoginToUser(this.state.username, this.state.password);
+    this.props
+      .LoginToUser(this.state.username, this.state.password)
+      .then((re) => {
+        console.log(re);
+      })
+      .cath((err) => {
+        console.log("error: ", err);
+      });
   }
 
   render() {
@@ -65,7 +70,6 @@ class LOGIN extends Component {
         />
         <Row className="login">
           <Col lg={6} md={12}>
-            {" "}
             <center>
               <Form
                 className="login_form"
@@ -80,7 +84,6 @@ class LOGIN extends Component {
                   </Col>
                 </Row>
                 <Row className="welcome_text">
-                  {" "}
                   <Col lg={12}>
                     <p>Welcome to Attendance Management System</p>
                   </Col>
@@ -120,7 +123,7 @@ class LOGIN extends Component {
                           maxLength="25"
                           value={this.state.password}
                           onChange={this.handleChange}
-                          autoComplete="off" 
+                          autoComplete="off"
                           required
                         />
 
@@ -166,6 +169,8 @@ class LOGIN extends Component {
 }
 
 // Map To State
+// Redux using Class base Components
+// 
 
 const mapToState = (state) => {
   return {
