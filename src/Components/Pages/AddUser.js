@@ -8,8 +8,9 @@ import { AiFillEyeInvisible } from "react-icons/ai";
 import { AiFillEye } from "react-icons/ai";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import { instance } from "../../Interceptors/Interceptors";
- 
+
 const add_userURL = "/user/auth/create/";
 
 class AddUser extends Component {
@@ -40,13 +41,13 @@ class AddUser extends Component {
   }
 
   onChangeUsername(e) {
-    this.setState({ username: e.target.value });
+    this.setState({ username: e.target.value.trim() });
   }
   onChangePassword(e) {
-    this.setState({ password: e.target.value });
+    this.setState({ password: e.target.value.trim() });
   }
   onChangeFName(e) {
-    this.setState({ fName: e.target.value });
+    this.setState({ fName: e.target.value.trim() });
   }
   FormSubmission(e) {
     e.preventDefault();
@@ -78,10 +79,10 @@ class AddUser extends Component {
       });
   }
   onChangesName(e) {
-    this.setState({ sName: e.target.value });
+    this.setState({ sName: e.target.value.trim() });
   }
   onChangeEmail(e) {
-    this.setState({ email: e.target.value });
+    this.setState({ email: e.target.value.trim() });
   }
   render() {
     return (
