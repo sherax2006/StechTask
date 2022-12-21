@@ -7,7 +7,6 @@ import {
   Input,
   Label,
   Col,
-  Table,
   Row,
   Button,
 } from "reactstrap";
@@ -105,6 +104,12 @@ class Visitors extends Component {
     });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.UsRed.order_by !== this.props.UsRed.order_by) {
+      this.Apply_Filter();
+    }
+  }
+
   componentDidMount() {
     VMService.VMS_login("admin", "here2enter").catch((err) => {
       console.log(err);
@@ -123,9 +128,6 @@ class Visitors extends Component {
   }
 
   Apply_Filter() {
-    VMService.VMS_login("admin", "here2enter").catch((err) => {
-      console.log(err);
-    });
     vms_instance
       .get(visit_URL, {
         params: {
@@ -276,7 +278,7 @@ class Visitors extends Component {
                   <br />
                   <DateRangePicker
                     className="date_Picker dateRPicker"
-                    format="dd-MM-yy"
+                    format="dd/MM/yy"
                     editable={false}
                     defaultValue={this.state.inputDate}
                     onChange={(date) => {
@@ -316,7 +318,7 @@ class Visitors extends Component {
           </CardBody>
         </Card>
 
-        <VisitorTable Result={this.state.Result} date={this.state.Date} />
+        <VisitorTable Result={this.state.Result} />
       </div>
     );
   }
@@ -324,7 +326,7 @@ class Visitors extends Component {
 
 const mapToState = (state) => {
   return {
-    UsRed: state.UserRed,
+    UsRed: state.UsReducer,
   };
 };
 const mapDispatchToState = (dispatch) => ({

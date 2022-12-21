@@ -1,7 +1,12 @@
 import { Badge } from "reactstrap";
 import { Table, Card, CardBody, Row, Col } from "reactstrap";
 import "../CSS/Visitors.css";
+import { useDispatch } from "react-redux";
+import VMService from "../Services/VMService";
+import { useEffect } from "react";
+ 
 const base_URL = "https://vms.simplitech.ai";
+ 
 
 const getBadgeStatus = (status) => {
   if (status === true) {
@@ -10,10 +15,21 @@ const getBadgeStatus = (status) => {
     return <Badge color="danger">No</Badge>;
   }
 };
-
-// APPLY FILTER 
-// VISITOR TABLE
+ 
 const VisitorTable = (props) => {
+  const dispatch = useDispatch();
+
+  useEffect(() => { 
+    VMService.VMS_login("admin", "here2enter").catch((err) => {
+      console.log(err);
+    });
+  });
+
+  const sortBy = (val) => {
+    dispatch({ type: "CHANGE_OREDR", value: val });
+    
+  };
+ 
   return (
     <>
       {props.Result && props.Result.length > 0 ? (
@@ -27,52 +43,58 @@ const VisitorTable = (props) => {
                       <th>Visitor</th>
                       <th>CNIC Picture</th>
                       <th
-
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("d_date");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("d_date");
+                        }}
                       >
                         Date
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("d_time");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("d_time");
+                        }}
                       >
                         Time
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("name");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("name");
+                        }}
                       >
                         Name
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("cnic");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("cnic");
+                        }}
                       >
                         CNIC#
                       </th>
-                      <th>Badge ID</th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("reference_person");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("batch_id");
+                        }}
+                      >
+                        Badge ID
+                      </th>
+                      <th
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("reference_person");
+                        }}
                       >
                         Host
                       </th>
                       <th
-                      // onClick={() => {
-                      //   this.props.ChangeOrder("department");
-                      //   this.Apply_Filter();
-                      // }}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => {
+                          sortBy("department");
+                        }}
                       >
                         Department
                       </th>
@@ -130,4 +152,4 @@ const VisitorTable = (props) => {
   );
 };
 
-export default VisitorTable; 
+export default VisitorTable;
